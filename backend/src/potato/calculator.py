@@ -2,7 +2,7 @@ from potato.conf import settings
 
 def calculate_price(
     grams: float,
-) -> float:
+) -> int:
     """
     calculate the price of potatoes based on wight
 
@@ -11,7 +11,10 @@ def calculate_price(
     """
     
     if grams >= settings.discount_threashold_grams:
-        return (grams / 100) * settings.price_100g_discounted
+        temp = (grams / 100) * settings.price_100g_discounted
     else:
-        return (grams / 100) * settings.price_100g
+        temp = (grams / 100) * settings.price_100g
+    
+    return round(int(temp), -1)
+
     
