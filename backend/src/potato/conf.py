@@ -6,7 +6,7 @@ class Settings:
 
     price_100g: float = float(os.getenv("PRICE_100G", 160))  # price per 100 grams
     price_100g_discounted: float = float(os.getenv("PRICE_100G_DISCOUNTED", 150))  # discounted price per 100 grams
-    discount_threashold_grams: float = float(os.getenv("DISCOUNT_THRESHOLD_GRAMS", 700))  # threshold grams for discount
+    discount_threashold_grams: float = float(os.getenv("DISCOUNT_THRESHOLD_GRAMS", 650))  # threshold grams for discount
 
 
 
